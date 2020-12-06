@@ -3,10 +3,9 @@ body {
     font-size: 15px;
     line-height: 1.5;
     color: #333;
-    background-color: #eeeeee;
-    background-image: url("../img/pattern.png");
+
+    background: #eee url("../img/pattern.png");
     background-size: 200px 200px;
-    background: #eeeeee url("../img/pattern.png");
 }
 
 .title {
@@ -36,55 +35,115 @@ ol {
 }
 
 .table {
-    border: 1px solid #aaaaaa;
     width: 100%;
+    border: 1px dashed #aaaaaa;
     border-collapse: collapse;
 }
 
 .table th {
+    padding: 5px 10px;
     text-align: left;
-    color: #ff0000;
+    color: #ef2828;
 }
 
 .table td {
-    border: 1px solid #aaaaaa;
     padding: 5px 10px;
+    border: 1px dashed #aaaaaa;
 }
 
 .table tfoot td {
     text-align: right;
 }
 
-/* Post */
+.text-red {
+    display: inline-block;
+    width: 100px;
 
+    color: #ce2424;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.page {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Post */
 .post {
-    width: 700px;
-    height: 400px;
-    margin: 0 auto 20px;
-    border: 1px solid #ddd;
+    width: 600px;
+    height: 300px;
     padding: 15px 25px;
-    background: #fff url("../img/bg.jpg") no-repeat center;
+    margin: 0 auto 20px;
+
+    border: 1px solid #ddd;
+
+    background: url("../img/bg.jpg") no-repeat center;
     background-size: cover;
 }
 
 .post-title {
     margin-top: 0;
     margin-bottom: 20px;
-    color: #00ff40;
+
+    color: #f5f518;
+}
+
+.post-text {
+    color: #fff;
 }
 
 .post-text p {
     margin: 0 0 10px 0;
-    color: #fff;
 }
 
-/*  Gradient */
 
+/* Gradient */
 .gradient {
     width: 600px;
     height: 300px;
     margin: 0 auto;
-    background-color: #fff;
-    /* background-image: linear-gradient(0, #fff 40%, #333 80%, #eeeeee); */
-    background-image: radial-gradient(circle, #fff 40%, #333 80%, #eeeeee);
+
+    /*background-image: linear-gradient(to left, #fff 20%, #333 20%, #333 40%, #fff 40%, #fff 60%, #333 60%, #333 80%, #fff 80%);*/
+    background-image: radial-gradient(circle, #fff, #333);
 }
+
+
+/* Form */
+.form {
+    width: 500px;
+    padding: 20px;
+    margin: auto;
+
+    background-color: #fff;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-input {
+    display: block;
+    padding: 5px;
+
+    border: 1px solid #000;
+
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+.form-textarea {
+    width: 200px;
+    height: 150px;
+    padding: 5px;
+
+    border: 1px solid #000;
+
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+
+
