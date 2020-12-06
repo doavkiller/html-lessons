@@ -14,8 +14,7 @@ p {
     text-align: center;
     font-weight: 700;
     letter-spacing: -2px;
-    text-decoration: line-through;
-    text-transform: uppercases;
+    text-transform: uppercase;
 }
 
 .justify {
@@ -34,4 +33,24 @@ ul {
 
 ol {
     list-style-type: decimal-leading-zero;
+}
+
+.table {
+    border: 1px solid #aaaaaa;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th {
+    text-align: left;
+    color: #ff0000;
+}
+
+.table td {
+    border: 1px solid #aaaaaa;
+    padding: 5px 10px;
+}
+
+.table tfoot td {
+    text-align: right;
 }
