@@ -29,8 +29,9 @@ p {
 
 .container {
     width: 100%;
-    max-width: 1000px;
+    max-width: 1030px;
     margin: 0 auto;
+    padding: 0 1rem;
 }
 
 /* ====page==== */
@@ -38,8 +39,10 @@ p {
 .page {
     width: 100%;
     height: 100vh;
+    min-height: 770px;
     background: #000000 url('../img/bg.jpg') no-repeat center;
     background-size: cover;
+    overflow: hidden;
     position: relative;
 }
 
@@ -47,9 +50,10 @@ p {
 /* ====header==== */
 
 .header {
-background-color: #2b7ded;
-padding: 1rem 0;
-margin-bottom: 110px;
+    max-width: 100%;
+    background-color: #2b7ded;
+    padding: 1rem 0;
+    margin-bottom: 110px;
 }
 
 .header-inner {
@@ -107,6 +111,11 @@ margin-bottom: 110px;
 
 .content {
     width: 565px;
+    max-width: 100%;
+}
+
+.content-header {
+    margin-bottom: 35px;
 }
 
 .subtitle {
@@ -120,7 +129,7 @@ margin-bottom: 110px;
     color: #ffffff;
     font-size: 2rem;
     font-weight: 500;
-    margin-bottom: 35px;
+    margin-bottom: 10px;
 }
 
 .title span {
@@ -134,7 +143,47 @@ margin-bottom: 110px;
     margin-bottom: 50px;
 }
 
-/* ====buttom=== */
+/* ====content form==== */
+
+.content-form {
+    display: block;
+    flex-direction: column;
+    width: 100%;
+    max-width: 280px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-input,
+.form-textarea {
+    display: block;
+    border-radius: 5px;
+    width: 100%;
+    font-family: inherit;
+    border: 0;
+    
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.1;
+    padding: 12px 18px;
+}
+
+.form-textarea {
+    min-height: 100px;
+    max-height: 200px;
+    resize: vertical;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder  {
+    color: #fff;
+}
+
+/* ====button=== */
 
 .btn {
     border-radius: 5px;
@@ -149,6 +198,20 @@ margin-bottom: 110px;
     text-decoration: none;
     line-height: 1.1;
     transition: background-color 0.2s linear;
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+    margin-bottom: 20px;
+}
+
+.btn-full {
+    display: block;
+    width: 100%;
+    outline: none;
+}
+
+.btn-full:focus {
+    background-color: rgb(102, 50, 245);
 }
 
 .btn:hover {
@@ -213,4 +276,99 @@ margin-bottom: 110px;
 .contacts-icon {
     display: inline-block;
     margin-right: 5px;
+}
+
+/* ====media=== */
+
+@media(max-width:1300px) {
+
+    .author {
+        right: -170px;
+    }
+}
+
+@media(max-width:767px) {
+
+.content-form {
+    margin: 0 auto; 
+}
+
+.page {
+        height: auto;
+        min-height: 100vh;
+        padding-bottom: 2rem;
+        }
+    
+.header {
+        margin-bottom: 50px;
+    }
+
+.header-brend {
+        font-size: 1.2rem;
+    }
+
+.header-logo {
+        display: none;
+    }
+
+.content {
+    margin-bottom: 50px;
+    text-align: center;
+    padding: 0 1rem;
+    margin: 0 auto;
+}
+
+.footer {
+        position: static;
+    }
+
+.contacts {
+    flex-direction: column;
+}
+
+.contacts-link {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+}
+
+.contacts-link:last-child::after {
+    display: none;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+.author {
+    display: none;
+}
+}
+
+@media(max-width:565px) {
+
+.header-inner {
+    flex-direction: column;
+    }
+
+.header-brend {
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+   font-size: 1.2rem;
+}
+
+.title {
+    font-size: 1.6rem;
+}
+
+}
+
+@media(max-width:320px) {
+    
+.subtitle {
+    font-size: 1.2rem;
+}
+
+.title {
+    font-size: 1.6rem;
+}
 }
